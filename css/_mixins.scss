@@ -1,0 +1,23 @@
+@mixin gradient($direction, $color1, $color2) {
+  background: linear-gradient(to $direction, $color1, $color2);
+}
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin footer-gradient($color1, $color2) {
+  background: linear-gradient(to left, $color1 35%, $color2);
+}
+
+@mixin footer-column-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include tablets {
+    gap: 10px;
+  }
+}

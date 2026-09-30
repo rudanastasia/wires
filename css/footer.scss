@@ -1,0 +1,83 @@
+.footer {
+  background-color: $light-blue;
+  color: $blue;
+  padding: 50px 0;
+
+  &--orange {
+    @include footer-gradient($light-orange, $light-yellow);
+  }
+
+  &--green {
+    @include footer-gradient($light-green, $light-lime-green);
+  }
+
+  &--pink {
+    @include footer-gradient($white-pink, $light-pink);
+  }
+
+  &__content {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    @include tablets {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    max-width: 234px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__address {
+    font-style: normal;
+    @include footer-column-layout;
+  }
+}
+
+.logo-tagline {
+  @include tablets {
+    display: none;
+  }
+}
+
+.footer-column {
+  @include footer-column-layout;
+
+  &__title {
+    @include phones {
+      font-size: 14px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__item {
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include phones {
+      font-size: 20px;
+    }
+  }
+}
+
+.postal-address {
+  font-weight: bold;
+
+  @include phones {
+    font-size: 20px;
+  }
+}

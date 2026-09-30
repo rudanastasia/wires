@@ -1,0 +1,303 @@
+.hero {
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 80px;
+
+  &__container {
+    background-image: linear-gradient(to left, $blue, $green);
+    border-radius: 30px;
+    min-height: 577px;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 584px;
+      height: 577px;
+      background: url('../assets/img/covers/hero-cover.png') top right/ contain no-repeat;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 0 30px 30px 0;
+
+      @include tablets {
+        border-radius: 0;
+        background-position: calc(100% + 150px) 0;
+      }
+    }
+
+    @include tablets {
+      display: flex;
+      align-items: flex-end;
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 0 0 90px;
+    position: relative;
+    z-index: 1;
+    max-width: 537px;
+
+    @include tablets {
+      padding: 0 20px;
+    }
+  }
+
+  &__eyebrow {
+    font-size: 14px;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-size: 64px;
+
+    @include tablets {
+      font-size: 40px;
+      text-shadow:
+        0 4px 8px $light-grey,
+        4px 4px 100px $light-grey;
+    }
+
+    &--blue {
+      color: $blue;
+    }
+  }
+
+  &__description {
+    font-size: 24px;
+    margin-bottom: 20px;
+
+    @include tablets {
+      font-size: 16px;
+    }
+
+    &--blue {
+      color: $blue;
+    }
+  }
+
+  &__image {
+    margin-left: auto;
+  }
+
+  &__product {
+    max-width: 537px;
+    margin-bottom: 55px;
+    position: relative;
+    left: -45px;
+
+    @include tablets {
+      margin-bottom: 10px;
+    }
+
+    &--right {
+      max-width: 728px;
+      align-self: flex-end;
+      left: 0;
+      margin-bottom: 15px;
+    }
+
+    &--vertical {
+      max-width: 300px;
+      width: 100%;
+      left: auto;
+
+      @include phones {
+        max-width: 200px;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+    @include tablets {
+      flex-direction: row;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+    font-size: 14px;
+    margin-left: 15%;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    @include tablets {
+      font-size: 20px;
+    }
+  }
+
+  &__ribbon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: auto;
+    height: 710px;
+    z-index: 0;
+    display: block;
+    pointer-events: none;
+
+    @include tablets {
+      top: 35%;
+    }
+  }
+
+  &--orange {
+    @include gradient(right, $orange, $light-orange);
+  }
+
+  &--green {
+    @include gradient(left, $green, $white-green);
+  }
+
+  &--pink {
+    background: linear-gradient(to right, $pink 50%, $light-pink);
+    @include gradient(right, $pink 50%, $light-pink);
+  }
+
+  &--product {
+    position: relative;
+    min-height: 933px;
+    overflow: hidden;
+
+    @include tablets {
+      min-height: 609px;
+    }
+
+    @include phones {
+      min-height: 509px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 577px;
+      background: url('../assets/img/decor/mask2.png') center center / cover no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: 1;
+      pointer-events: none;
+
+      @include tablets {
+        top: 35%;
+      }
+
+      @include phones {
+        top: 40%;
+      }
+    }
+
+    .hero__container {
+      position: relative;
+      z-index: 2;
+      background: none;
+      border-radius: 0;
+      min-height: 933px;
+
+      &::after {
+        display: none;
+      }
+
+      @include tablets {
+        align-items: flex-start;
+        min-height: 609px;
+      }
+
+      @include phones {
+        min-height: 509px;
+      }
+    }
+
+    .hero__content {
+      max-width: none;
+      margin-top: 40px;
+      padding: 0;
+
+      @include tablets {
+        width: 100%;
+        padding: 0 20px;
+      }
+
+      &--row {
+        flex-direction: row;
+
+        .hero__title {
+          font-size: clamp(40px, 8vw, 128px);
+        }
+
+        @include phones {
+          flex-direction: column;
+        }
+      }
+    }
+
+    .hero__title {
+      font-size: 128px;
+
+      @include tablets {
+        font-size: 40px;
+      }
+    }
+
+    .hero__description {
+      font-size: 32px;
+      margin-bottom: 0;
+
+      @include tablets {
+        font-size: 16px;
+      }
+    }
+
+    .hero__actions {
+      align-self: flex-end;
+      margin-top: 25px;
+      width: auto;
+
+      @include tablets {
+        margin-top: 0;
+      }
+
+      &--left {
+        align-self: flex-start;
+
+        @include tablets {
+          margin-top: 25px;
+        }
+      }
+    }
+
+    .btn {
+      padding: 15px 0;
+      min-width: 300px;
+      font-size: 30px;
+
+      @include tablets {
+        font-size: 15px;
+        min-width: 160px;
+      }
+
+      @include phones {
+        padding: 8px 0;
+      }
+    }
+  }
+}

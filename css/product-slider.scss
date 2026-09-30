@@ -1,0 +1,53 @@
+.product-slider {
+  margin-top: 30px;
+  overflow: hidden;
+
+  &__list {
+    display: flex;
+    gap: 25px;
+    align-items: stretch;
+  }
+
+  &__item {
+    display: flex;
+    background-color: $green;
+    border-radius: 20px;
+    flex: 0 0 calc((100% - 25px) / 2);
+    padding: 30px 25px;
+    gap: 10px;
+
+    &--alt {
+      background-color: $blue;
+    }
+
+    &--empty {
+      visibility: hidden;
+    }
+
+    @include tablets {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__desc {
+    color: $white;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    flex: 1;
+
+    @include phones {
+      font-size: 16px;
+    }
+  }
+
+  &__img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 20px;
+
+    @include tablets {
+      max-width: 118px;
+    }
+  }
+}

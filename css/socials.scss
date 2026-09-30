@@ -1,0 +1,25 @@
+.socials {
+  @include tablets {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &--row {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    width: 50px;
+    height: 50px;
+  }
+}

@@ -1,0 +1,40 @@
+.modal-mobile-menu {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $light-blue;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 40px 0;
+  z-index: 1001;
+  color: $blue;
+
+  &__close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    border: none;
+    background-color: $light-blue;
+
+    &::before,
+    &::after {
+      content: '';
+      background-color: $light-grey;
+      width: 20px;
+      height: 2px;
+      position: absolute;
+      top: 50%;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}

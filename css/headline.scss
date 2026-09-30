@@ -1,0 +1,4 @@
+.headline {
+  @include flex-space-between;
+  flex-wrap: wrap;
+}

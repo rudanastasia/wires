@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 24px;
+
+  @include tablets {
+    font-size: 18px;
+  }
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: 20px;
+
+  @include tablets {
+    font-size: 17px;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}

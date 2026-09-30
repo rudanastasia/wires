@@ -1,0 +1,64 @@
+.btn {
+  font-weight: bold;
+  text-transform: uppercase;
+  max-width: 180px;
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: $white;
+    border: 1px solid $blue;
+    color: $blue;
+  }
+
+  &--blue,
+  &--green,
+  &--orange,
+  &--light-blue {
+    color: $white;
+  }
+
+  &--blue {
+    background-color: $blue;
+    font-size: 16px;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &--white {
+    background-color: $white;
+    color: $blue;
+    max-width: 220px;
+    padding: 10px 0;
+
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+  }
+
+  &--green {
+    background-color: $green;
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  &--orange {
+    background-color: $orange;
+    max-width: 300px;
+    padding: 10px 0;
+  }
+
+  &--light-blue {
+    background-color: $bright-blue;
+  }
+
+  &--mobile {
+    display: block;
+  }
+}

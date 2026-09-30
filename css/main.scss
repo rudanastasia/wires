@@ -1,0 +1,27 @@
+//normalize
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+
+//setups
+@import '_variables';
+@import '_mixins';
+@import 'media';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'layout';
+@import 'base';
+@import 'header';
+@import 'logo';
+@import 'menu';
+@import 'btn';
+@import 'hamburger';
+@import 'section';
+@import 'typography';
+@import 'hero';
+@import 'headline';
+@import 'product-properties';
+@import 'product-slider';
+@import 'slider-directions';
+@import 'footer';
+@import 'socials';
+@import 'mobile-menu';
+@import 'modal-feedback';
+@import 'form';
