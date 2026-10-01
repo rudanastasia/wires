@@ -33,7 +33,7 @@
                         <li class="menu__item"><a href="#no-scroll" class="menu__link">Новости</a></li>
                     </ul>
                 </nav>
-                <button class="btn btn--blue" type="button">Связаться</button>
+                <button class="btn btn--blue callback" type="button">Связаться</button>
                 <button class="hamburger" type="button" aria-label="Открыть меню">
                     <div class="hamburger__plank"></div>
                     <div class="hamburger__plank"></div>
@@ -50,7 +50,7 @@
                             <h1 class="hero__title hero__title--blue">Фамисепт</h1>
                             <div class="hero__description hero__description--blue">Спрей для интимной гигиены</div>
                             <div class="hero__actions hero__actions--left">
-                                <button class="btn btn--white" type="button">Купить</button>
+                                <button class="btn btn--white order" type="button">Купить</button>
                             </div>
                         </div>
                         <div class="hero__image">
@@ -195,7 +195,7 @@
                     <p>21 августа 2023 года</p>
                 </div>
                 <div class="section__action">
-                    <button class="btn btn--light-blue">Купить</button>
+                    <button class="btn btn--light-blue order">Купить</button>
                 </div>
             </section>
         </main>
@@ -232,7 +232,165 @@
             </div>
         </footer>
     </div>
+<div class="modal-mobile-menu">
+    <a href="./" class="logo__link"><img src="./assets/img/logos/logo.png" alt="логотип компании" class="logo__img"></a>
+    <nav class="menu menu--mobile" aria-label="Мобильное меню">
+        <ul class="menu__list menu__list--mobile">
+            <li class="menu__item menu__item--dropdown menu__item--dropdown-mobile"><a href="#no-scroll"
+                    class="menu__link">Препараты</a>
+                <ul class="menu__submenu menu__submenu--mobile">
+                    <li class="menu__subitem"> <a href="troficol.html" class="menu__sublink">Трофикол</a>
+                    </li>
+                    <li class="menu__subitem"> <a href="famisept.html" class="menu__sublink">Фамисепт</a>
+                    </li>
+                    <li class="menu__subitem"> <a href="skinpro.html" class="menu__sublink">Скин Про</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu__item"><a href="#no-scroll" class="menu__link">О нас</a></li>
+            <li class="menu__item"><a href="#no-scroll" class="menu__link">Контакты</a></li>
+            <li class="menu__item"><a href="#no-scroll" class="menu__link">Новости</a></li>
+        </ul>
+    </nav>
+    <button class="btn btn--blue btn--mobile callback" type="button">Связаться</button>
+    <ul class="footer-column__list">
+        <li class="footer-column__item"><a href="tel:+7555555555">+7 555 555 555</a></li>
+        <li class="footer-column__item"><a href="mailto:wires@mail.com">wires@mail.com</a></li>
+    </ul>
+    <address class="footer__address">
+        <div class="postal-address">Москва, проспект Мира, 300</div>
+    </address>
+    <nav class="socials socials--row">
+        <div class="socials__item">
+            <a href="#no-scroll" class="socials__link"><img src="./assets/img/icons/instagram.png" alt="instagram"
+                    class="socials__img"></a>
+        </div>
+        <div class="socials__item"><a href="#no-scroll" class="socials__link"><img src="./assets/img/icons/whatsapp.png"
+                    alt="whatsapp" class="socials__img"></a></div>
+    </nav>
+    <button class="modal-mobile-menu__close" type="button" aria-label="Закрыть меню"></button>
+</div>
+<div class="modal-feedback" role="dialog" aria-modal="true" aria-labelledby="feedback-title">
+    <div class="modal-feedback__content">
+        <form action="https://formspree.io/f/xojgoeee" method="post" class="form" id="callback-form" novalidate>
+            <input type="hidden" name="form-type" value="Обратный звонок">
+            <div class="form__header">
+                <h2 class="form__title" id="feedback-title">Закажите обратный звонок</h2>
+                <div class="form__description">Оставьте контакты и мы вам перезвоним</div>
+            </div>
+            <div class="form__row">
+                <div class="form__block">
+                    <label for="customer-name" class="form__visually-hidden">Ваше имя</label>
+                    <input type="text" class="form__input" name="name" placeholder="Ваше имя" autocomplete="name"
+                        required id="customer-name" aria-describedby="customer-name-error">
+                    <span class="form__error" id="customer-name-error" aria-live="polite"></span>
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__block">
+                    <label for="customer-phone" class="form__visually-hidden">Номер телефона</label>
+                    <input type="tel" class="form__input" name="phone" placeholder="Номер телефона" autocomplete="tel"
+                        inputmode="tel" required id="customer-phone" aria-describedby="customer-phone-error">
+                    <span class="form__error" id="customer-phone-error" aria-live="polite"></span>
+                </div>
+            </div>
+            <div class="form__status" id="callback-status" role="status" aria-live="polite">
+            </div>
+            <div class="form__button">
+                <button class="btn btn--blue btn--mobile" type="submit" id="callback-send">Отправить</button>
+            </div>
+        </form>
+        <button class="modal-feedback__close" type="button" aria-label="Закрыть форму обратной связи"></button>
+    </div>
+</div>
+<div class="modal-success" role="dialog" aria-modal="true" aria-labelledby="success-title">
+    <div class="modal-success__content">
+        <h2 class="modal-success__title" id="success-title">
+            Спасибо!
+        </h2>
+        <p class="modal-success__message">
+            Мы скоро вам перезвоним.
+        </p>
+        <button class="modal-success__close" type="button" aria-label="Закрыть">
+        </button>
+    </div>
+</div>
+<div class="modal-order" role="dialog" aria-modal="true" aria-labelledby="order-title">
+    <div class="modal-order__content">
+        <form action="https://formspree.io/f/xojgoeee" method="post" class="form" id="order-form" novalidate>
+            <input type="hidden" name="form-type" value="Заказ">
+            <div class="form__header">
+                <h2 class="form__title" id="order-title">Оставьте заявку</h2>
+                <div class="form__description">Заполните поля формы и мы с вами свяжемся для уточнения заказа</div>
+            </div>
+            <div class="form__row">
+                <div class="form__block">
+                    <label for="order-name" class="form__visually-hidden">Ваше имя</label>
+                    <input type="text" class="form__input" name="name" placeholder="Ваше имя" autocomplete="name"
+                        required id="order-name" aria-describedby="order-name-error">
+                    <span class="form__error" id="order-name-error" aria-live="polite"></span>
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__block">
+                    <label for="order-phone" class="form__visually-hidden">Номер телефона</label>
+                    <input type="tel" class="form__input" name="phone" placeholder="Номер телефона" autocomplete="tel"
+                        inputmode="tel" required id="order-phone" aria-describedby="order-phone-error">
+                    <span class="form__error" id="order-phone-error" aria-live="polite"></span>
+                </div>
+            </div>
+            <div class="form__row">
+                <fieldset class="form__fieldset" id="order-product" aria-describedby="order-product-error">
+                    <legend class="form__legend">Выберите средства</legend>
 
+                    <div class="products">
+                        <label class="product">
+                            <input class="product__input" type="checkbox" name="product[]" value="Пелагро Про">
+                            <span class="product__card">
+                                <img class="product__img" src="./assets/img/products/pelargo-pro-min.png"
+                                    alt="Пелагро Про">
+                                <span class="product__name">Пелагро Про</span>
+                            </span>
+                        </label>
+
+                        <label class="product">
+                            <input class="product__input" type="checkbox" name="product[]" value="Трофикол">
+                            <span class="product__card">
+                                <img class="product__img" src="./assets/img/products/troficol-min.png" alt="Трофикол">
+                                <span class="product__name">Трофикол</span>
+                            </span>
+                        </label>
+
+                        <label class="product">
+                            <input class="product__input" type="checkbox" name="product[]" value="Скин Про">
+                            <span class="product__card">
+                                <img class="product__img" src="./assets/img/products/skin-pro-min.png" alt="Скин Про">
+                                <span class="product__name">Скин Про</span>
+                            </span>
+                        </label>
+
+                        <label class="product">
+                            <input class="product__input" type="checkbox" name="product[]" value="Фамисепт">
+                            <span class="product__card">
+                                <img class="product__img" src="./assets/img/products/famisept-min.png" alt="Фамисепт">
+                                <span class="product__name">Фамисепт</span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <span class="form__error" id="order-product-error" aria-live="polite"></span>
+                </fieldset>
+            </div>
+            <p class="form__status" id="order-status" role="status">
+            </p>
+            <div class="form__button">
+                <button class="btn btn--blue btn--mobile" type="submit" id="order-send">Отправить</button>
+            </div>
+        </form>
+        <button class="modal-order__close" type="button" aria-label="Закрыть форму оформления заказа"></button>
+    </div>
+</div>
+<script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
