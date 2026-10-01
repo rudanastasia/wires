@@ -1,5 +1,6 @@
 .modal-feedback,
-.modal-success {
+.modal-success,
+.modal-order {
   position: fixed;
   inset: 0;
   z-index: 1020;
@@ -20,7 +21,8 @@
 }
 
 .modal-feedback__content,
-.modal-success__content {
+.modal-success__content,
+.modal-order__content {
   position: relative;
   width: 100%;
   max-width: 600px;
@@ -28,7 +30,8 @@
 }
 
 .modal-feedback__close,
-.modal-success__close {
+.modal-success__close,
+.modal-order__close {
   position: absolute;
   top: 10px;
   right: 10px;

@@ -1,5 +1,8 @@
 import { closeMobileMenu } from './mobile-menu.js';
 
+//
+//Модальное окно обратного звонка
+//
 const callbackBtns = document.querySelectorAll('.callback');
 const callbackModal = document.querySelector('.modal-feedback');
 const callbackClose = document.querySelector('.modal-feedback__close');
@@ -51,4 +54,28 @@ successModal.addEventListener('click', (e) => {
   if (e.target === successModal) {
     closeSuccessModal();
   }
+});
+
+//
+// Модальное окно формы заказа
+//
+const orderModal = document.querySelector('.modal-order');
+const orderClose = document.querySelector('.modal-order__close');
+const orderBtns = document.querySelectorAll('.order');
+
+const openOrderModal = () => {
+  orderModal.classList.add('is-open');
+  document.body.classList.add('no-scroll');
+};
+
+export const closeOrderModal = () => {
+  orderModal.classList.remove('is-open');
+  document.body.classList.remove('no-scroll');
+};
+
+orderBtns.forEach((btn) => btn.addEventListener('click', openOrderModal));
+orderClose.addEventListener('click', closeOrderModal);
+
+orderModal.addEventListener('click', (e) => {
+  if (e.target === orderModal) closeOrderModal();
 });
