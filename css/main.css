@@ -1180,6 +1180,7 @@ button {
         -ms-flex-pack: center;
             justify-content: center;
     width: 100%;
+    gap: 10px;
   }
 }
 .socials--row {
