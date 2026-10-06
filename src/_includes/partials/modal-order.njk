@@ -1,0 +1,79 @@
+<div class="modal-order" role="dialog" aria-modal="true" aria-labelledby="order-title">
+        <div class="modal-order__content">
+            <form action="https://formspree.io/f/xojgoeee" method="post" class="form" id="order-form" novalidate>
+                <input type="hidden" name="form-type" value="Заказ">
+                <div class="form__header">
+                    <h2 class="form__title" id="order-title">Оставьте заявку</h2>
+                    <div class="form__description">Заполните поля формы и мы с вами свяжемся для уточнения заказа</div>
+                </div>
+                <div class="form__row">
+                    <div class="form__block">
+                        <label for="order-name" class="form__visually-hidden">Ваше имя</label>
+                        <input type="text" class="form__input" name="name" placeholder="Ваше имя" autocomplete="name"
+                            required id="order-name" aria-describedby="order-name-error">
+                        <span class="form__error" id="order-name-error" aria-live="polite"></span>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="form__block">
+                        <label for="order-phone" class="form__visually-hidden">Номер телефона</label>
+                        <input type="tel" class="form__input" name="phone" placeholder="Номер телефона"
+                            autocomplete="tel" inputmode="tel" required id="order-phone"
+                            aria-describedby="order-phone-error">
+                        <span class="form__error" id="order-phone-error" aria-live="polite"></span>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <fieldset class="form__fieldset" id="order-product" aria-describedby="order-product-error">
+                        <legend class="form__legend">Выберите средства</legend>
+
+                        <div class="products">
+                            <label class="product">
+                                <input class="product__input" type="checkbox" name="product[]" value="Пелагро Про">
+                                <span class="product__card">
+                                    <img class="product__img" src="./assets/img/products/pelargo-pro-min.png"
+                                        alt="Пелагро Про">
+                                    <span class="product__name">Пелагро Про</span>
+                                </span>
+                            </label>
+
+                            <label class="product">
+                                <input class="product__input" type="checkbox" name="product[]" value="Трофикол">
+                                <span class="product__card">
+                                    <img class="product__img" src="./assets/img/products/troficol-min.png"
+                                        alt="Трофикол">
+                                    <span class="product__name">Трофикол</span>
+                                </span>
+                            </label>
+
+                            <label class="product">
+                                <input class="product__input" type="checkbox" name="product[]" value="Скин Про">
+                                <span class="product__card">
+                                    <img class="product__img" src="./assets/img/products/skin-pro-min.png"
+                                        alt="Скин Про">
+                                    <span class="product__name">Скин Про</span>
+                                </span>
+                            </label>
+
+                            <label class="product">
+                                <input class="product__input" type="checkbox" name="product[]" value="Фамисепт">
+                                <span class="product__card">
+                                    <img class="product__img" src="./assets/img/products/famisept-min.png"
+                                        alt="Фамисепт">
+                                    <span class="product__name">Фамисепт</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <span class="form__error" id="order-product-error" aria-live="polite"></span>
+                    </fieldset>
+                </div>
+                <p class="form__status" id="order-status" role="status">
+                </p>
+                <div class="form__button">
+                    <button class="btn btn--blue btn--mobile" type="submit" id="order-send">Отправить</button>
+                </div>
+            </form>
+            <button class="modal-order__close" type="button" aria-label="Закрыть форму оформления заказа"></button>
+        </div>
+</div>

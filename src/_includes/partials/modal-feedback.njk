@@ -1,0 +1,34 @@
+<div class="modal-feedback" role="dialog" aria-modal="true" aria-labelledby="feedback-title">
+    <div class="modal-feedback__content">
+            <form action="https://formspree.io/f/xojgoeee" method="post" class="form" id="callback-form" novalidate>
+                <input type="hidden" name="form-type" value="Обратный звонок">
+                <div class="form__header">
+                    <h2 class="form__title" id="feedback-title">Закажите обратный звонок</h2>
+                    <div class="form__description">Оставьте контакты и мы вам перезвоним</div>
+                </div>
+                <div class="form__row">
+                    <div class="form__block">
+                        <label for="customer-name" class="form__visually-hidden">Ваше имя</label>
+                        <input type="text" class="form__input" name="name" placeholder="Ваше имя" autocomplete="name"
+                            required id="customer-name" aria-describedby="customer-name-error">
+                        <span class="form__error" id="customer-name-error" aria-live="polite"></span>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="form__block">
+                        <label for="customer-phone" class="form__visually-hidden">Номер телефона</label>
+                        <input type="tel" class="form__input" name="phone" placeholder="Номер телефона"
+                            autocomplete="tel" inputmode="tel" required id="customer-phone"
+                            aria-describedby="customer-phone-error">
+                        <span class="form__error" id="customer-phone-error" aria-live="polite"></span>
+                    </div>
+                </div>
+                <div class="form__status" id="callback-status" role="status" aria-live="polite">
+                </div>
+                <div class="form__button">
+                    <button class="btn btn--blue btn--mobile" type="submit" id="callback-send">Отправить</button>
+                </div>
+            </form>
+            <button class="modal-feedback__close" type="button" aria-label="Закрыть форму обратной связи"></button>
+    </div>
+</div>
