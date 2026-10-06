@@ -16,7 +16,8 @@
 
       {{ content | safe }}
 
-      {% include "partials/" + footer + ".njk" %}
+      {% set footerFile = footer or "footer" %}
+{% include "partials/" + footerFile + ".njk" %}
   </div>
   {% include "partials/mobile-menu.njk" %}
   {% include "partials/modal-feedback.njk" %}
